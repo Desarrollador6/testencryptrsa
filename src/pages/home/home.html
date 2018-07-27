@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      pkcs1
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <form [formGroup]="rsa">
+    <ion-list>
+
+    <ion-item>
+      <ion-label fixed>Texto a encriptar</ion-label>
+      <ion-input formControlName="text1" type="text" value=""></ion-input>
+    </ion-item>
+
+  </ion-list>
+  textoEncriptadoHtml:
+  <br><br>
+  {{encryptedWord}}
+  <br><br><br>
+  textoDesEncriptadoHtml:
+  <br><br>
+  {{palabraDesencriptada}}
+
+  </form>
+
+  
+
+  <button ion-button (click)="encriptar()" color="light">Encriptar</button>
+  <button ion-button (click)="desencriptar()" color="light">Desencriptar</button>
+  <button ion-button (click)="pkcs()" color="light">pkcs8</button>
+  <!-- <button ion-button (click)="ejemplo()" color="light">Desencriptar</button> -->
+
+</ion-content>
